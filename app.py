@@ -6,11 +6,11 @@ def data_get():
     city = city_name.get()
     
 
-data = requests.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=28a0ea8d6fe99bd73a6edbe5e8429c12").json()
-w_label1.config(text=data["weather"][0]["main"])
-wb_label1.config(text=data["weather"][0]["description"])
-temp_label1.config(text=str(data["main"]["temp"]-273.15))
-per_label1.config(text=data["main"]["pressure"])
+    data = requests.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=28a0ea8d6fe99bd73a6edbe5e8429c12").json()
+    w_label1.config(text=data["weather"][0]["main"])
+    wb_label1.config(text=data["weather"][0]["description"])
+    temp_label1.config(text=str(data["main"]["temp"]-273.15))
+    per_label1.config(text=data["main"]["pressure"])
 
 
 
